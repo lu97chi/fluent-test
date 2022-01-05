@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import { Link, Text } from '@fluentui/react';
+import { Link, Text } from 'office-ui-fabric-react';
 
 function handleClickOnLink(ev: React.MouseEvent<unknown>) {
   window.alert('clicked on Link component which is rendered as html button');
@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLink('http://google.com')
-    }, 3000);
+    }, 10000);
   }, []);
   return (
     <div className="App">
