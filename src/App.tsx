@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { Link, Text } from '@fluentui/react';
 
@@ -7,6 +7,13 @@ function handleClickOnLink(ev: React.MouseEvent<unknown>) {
 }
 
 function App() {
+  const [link, setLink] = useState('');
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLink('http://google.com')
+    }, 3000);
+  }, []);
   return (
     <div className="App">
     <div>
@@ -30,6 +37,7 @@ function App() {
         making a button with an unstyled variant and adding the img content and href source to that.
       </Text>
       <a href="https://google.com">Text link</a>
+      <Link role="link" target="_blank" underline aria-label="hello there" href={link}>Hello link</Link>
     </div>
     </div>
   );
