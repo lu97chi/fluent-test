@@ -15,11 +15,11 @@ function App() {
     }, 10000);
   }, []);
   return (
-    <div className="App">
+    <div>
     <div>
       <Text>
         When a link has an href,{' '}
-        <Link href="https://developer.microsoft.com/en-us/fluentui#/controls/web/link" underline>
+        <Link role="link" tabIndex={0} href="https://developer.microsoft.com/en-us/fluentui#/controls/web/link" underline>
           it renders as an anchor tag.
         </Link>{' '}
         Without an href,{' '}

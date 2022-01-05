@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.ms-Link{
+  color: red;
+}
+.ms-Link:active{
+  outline: red !important;
+}
